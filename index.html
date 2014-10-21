@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Mirrored from tmapps.esri.com/Tornado_Tuscaloosa/ by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 13 May 2011 13:14:28 GMT -->
+<head>
+<title>ArcGIS JSON Geometry Utility</title>
+<!--Content Owner: Brenda Martinez -->
+<!-- last edited by: mdd 7.1.10 -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+<!-- description: CHANGE -->
+<meta name="Description" content="ESRI is the world leader in GIS (geographic information system) modeling and mapping software and technology. This site features GIS mapping software, desktop GIS, server GIS, developer GIS, mobile GIS, GIS Web services, business GIS, Internet mapping, GIS solutions, GIS training and education, demos, data, spatial analysis tools, consulting, services, partners, customer service, and support." />
+<!-- end description -->
+<link rel="canonical" href="http://mapapps.esri.comindex.html" />
+<!-- Favorite Bookmark Icon -->
+<link rel="shortcut icon" type="image/ico" href="http://www.esri.com/favicon.ico" />
+<link rel="icon" type="image/ico" href="http://www.esri.com/favicon.ico" />
+<!-- End Favorite Bookmark Icon -->
+<link rel="stylesheet" type="text/css" href="http://www.esri.com/styles/reset.css" />
+<link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/2.2/js/dojo/dijit/themes/soria/soria.css " />
+<link rel="stylesheet" type="text/css" href="css/application.css" />
+<link rel="stylesheet" type="text/css" href="css/content_box.css" />
+<script type="text/javascript">  djConfig = { parseOnLoad: true };</script>
+<script type="text/javascript" src="http://serverapi.arcgisonline.com/jsapi/arcgis/?v=2.2"></script>
+<script type="text/javascript" src="scripts/AGS2JSON.js"></script>
+<script type="text/javascript" src="http://www.esri.com/styles/esricore/scripts/jquery.js"></script>
+<script type="text/javascript" src="http://www.esri.com/styles/esricore/scripts/jquery.tabs.min.js"></script>
+<script type="text/javascript" src="http://www.esri.com/styles/esricore/scripts/jquery.tabs.init.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.esri.com/styles/includes/tooltip.css"/>
+<script type="text/javascript" src="http://www.esri.com/styles/esricore/scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" src="http://www.esri.com/styles/esricore/scripts/jquery.tools.init.js"></script>
+<script type="text/javascript" src="scripts/tooltip.js"></script>
+<script type="text/javascript" src="scripts/toggle_jquery.js"></script>
+<script type="text/javascript" src="scripts/edit_search.js"></script>
+<script type="text/javascript" src="scripts/social_media.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://bit.ly/javascript-api.js?version=latest&amp;login=esri&amp;apiKey=R_65fd9891cd882e2a96b99d4bda1be00e"></script>
+
+<script type="text/javascript"  src="scripts/JSON2.js"></script>
+
+
+</head>
+
+<body class="soria">
+
+<div id="mapcon">
+    <div id="map">
+        <div id="drawTools">
+          <button onclick="tb.activate(esri.toolbars.Draw.POINT);">Point</button>
+          
+     <!--     <button style="visibility:collapse" onclick="tb.activate(esri.toolbars.Draw.MULTI_POINT);">Multipoint</button>
+          -->
+          <button onclick="tb.activate(esri.toolbars.Draw.EXTENT);">Extent</button>
+          <button onclick="tb.activate(esri.toolbars.Draw.POLYLINE);">Polyline</button>
+          <button onclick="tb.activate(esri.toolbars.Draw.FREEHAND_POLYLINE);">Freehand Polyline</button>
+          <button onclick="tb.activate(esri.toolbars.Draw.POLYGON);">Polygon</button>
+          <button onclick="tb.activate(esri.toolbars.Draw.FREEHAND_POLYGON);">Freehand Polygon</button>
+          <button onclick="tb.activate(esri.toolbars.Draw.LINE);">Line</button>
+          <button onclick="tb.deactivate()">Deactivate</button>
+          <button onclick="clearGraphics();">Clear</button>
+        </div>
+
+        <div id="topControls" style="top:40px">
+            <div id="basemap"><a href="javascript:changeMap(['lyrStreet']);" id="streetmap_btn" title="Streetmap">Streetmap</a>&nbsp;<a id="imagery_btn" title="Satellite Imagery" href="javascript:changeMap(['lyrImg']);">Satellite Imagery</a>&nbsp;<a id="topographic_btn" class="selected" title="Topographic Map" href="javascript:changeMap(['lyrTopo']);">Topographic Map</a></div>
+        </div>
+        <div id="esriLogo">
+            <div id="logo" class="logo"> 
+                <!-- logo --> 
+            </div>
+        </div>
+        <div id="controls" style="top:40px">
+            <div id="locatebox">
+                <div id="locate">
+                    <div class="fscon">
+                        <input id="address" class="fsearchinput" type="text" size="20" value="" />
+                        <div class="resetoff resetlocate">&nbsp;</div>
+                    </div>
+                    <a id="locateBtn" title="Locate">Locate</a></div>
+            </div>
+
+            <div id="AGS2JSON" class="grouping" style="padding:5px">
+                <h2 class="collapse" id="toggle1" title="Collapse">AGS2JSON</h2>
+                <div class="toggleArea" style="padding:5px">
+                  
+        <!--
+                         <input  type="text" id="txtOutputJson" 
+                    style="border-style: ridge; margin:0px; padding:0px; border-width: 2px; min-height:250px; height:100%; width:95%;  overflow: scroll"  />
+          
+          -->
+              <textarea wrap="virtual" id="txtOutputJson" style="height: 245px; width: 100%" ></textarea>
+
+               
+                </div>
+
+            </div>
+
+                             <div class="clear"> 
+                            <!-- clear --> 
+                        </div>
+            <div id="JSON2AGS" class="grouping" style="padding:5px">
+                <h2 class="collapse" id="toggle2" title="Collapse">JSON2AGS</h2>
+                <div class="toggleArea" style="padding:5px">
+           
+            <textarea wrap="virtual" id="txtInputJson" style="height: 220px;   width: 100%" ></textarea>
+            <button onclick="doJSON2AGS();" style="margin:5px">Submit</button>
+          
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+ <img alt="Loading" id="loadingImg" src="images/map/loading.gif" style="position:absolute; top:50%; left:50%; z-index:100;" /> 
+</body>
+
+<!-- Mirrored from tmapps.esri.com/Tornado_Tuscaloosa/ by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 13 May 2011 13:14:38 GMT -->
+</html>

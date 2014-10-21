@@ -1,0 +1,167 @@
+#templatePicker {
+	margin:0 !important;
+	border:none !important;
+	padding:0 !important;
+	margin-top:10px !important;
+}
+.tundra .dijitBorderContainer {
+	background-color:transparent !important;
+}
+.soria .dijitBorderContainer {
+	background-color:transparent !important;
+}
+#attrTbl {
+	width:220px !important;
+}
+#add_content .box div {
+	background-color:transparent !important;
+	border-color:#fff !important;
+	overflow:hidden !important;
+	font-family:Verdana !important;
+	font-style:normal !important;
+	font-size:12px !important;
+	line-height:12px !important;
+}
+#add_content .box span {
+	margin:0 !important;
+	padding:0 !important;
+}
+#add_content .box input, #add_content .box textarea {
+	width:auto !important;
+	color:#000 !important;
+	margin:2px !important;
+	padding:2px !important;
+}
+#add_content .box td, #add_content .box tr {
+	border:0 !important;
+	outline:0 !important;
+}
+.dojoxGridCell, .dojoxGrid td {
+	border-color:#fff !important;
+	background-color:#fff !important;
+	color:#014c85 !important;
+}
+.templatePicker .grid .selectedItem {
+	border:1ps solid #fff !important;
+}
+#add_content .box div.dijitTabInnerDiv {
+	display:block !important;
+	text-decoration:none !important;
+	margin:0 !important;
+	border:1px solid #fff !important;
+	padding:4px 8px !important;
+	font-size:12px !important;
+	line-height:12px !important;
+	cursor:pointer !important;
+	color:#000 !important;
+	font-weight:bold !important;
+	background:url(jsdev/chile-vgi/images/button.html) left center repeat-x !important;
+}
+#add_content .box div.dijitTabChecked div.dijitTabInnerDiv {
+	color:#014c85 !important;
+	background:url(images/button_hover.html) left center repeat-x !important;
+}
+.tabStripButton {
+	display:none !important;
+}
+#add_content .box td.dojoxGridCellFocus .selectedItem, #add_content .box div .templatePicker .grid .selectedItem {
+	background-color:#444 !important;
+}
+.tundra .dijitTextBox, .tundra .dijitComboBox, .tundra .dijitSpinner, .tundra .dijitTextArea, .tundra .dijitInlineEditor input {
+	background-image:none !important;
+}
+.soria .dijitTextBox, .soria .dijitComboBox, .soria .dijitSpinner, .soria .dijitTextArea, .soria .dijitInlineEditor input {
+	background-image:none !important;
+}
+.itemSymbol {
+	cursor:pointer !important;
+}
+#editing_tablist_templatePickerPane img, #editing_tablist_attrInspectorPane img {
+	display:none;
+}
+.groupLabel {
+	display:none !important;
+}
+.cReplace {
+	margin:0 !important;
+	margin-top:10px !important;
+}
+.soria .infowindow .sprite {
+	background-image:url("../images/soria.infowindow.png") !important;
+}
+.infowindow .window .top .right .user .border {
+	display:none !important;
+}
+#searchText #flagTxt {
+	font-size:9px;
+}
+/* transparancy slider for TOC tooltip */
+.transSlider {
+	font-size:9px;
+	border:1px solid #DCDCDC;
+	padding:3px 10px;
+	margin-top:-1px;
+	text-align:center;
+	background:#fff;
+	color:#000;
+	position:absolute;
+	top:100%;
+	left:-1px;
+	z-index:4;
+	width:275px;
+}
+.transSlider span.title {
+	display:inline !important;
+	vertical-align:middle !important;
+	padding-right:5px;
+}
+.transSlider table {
+	display:inline-block !important;
+ *display:inline !important;
+	vertical-align:middle !important;
+}
+.transSlider table td {
+	vertical-align:middle !important;
+}
+/* Custom TOC Tooltip - to use comment out the reference to tooltip.css in index.html 
+span.tooltip_left, span.tooltip_right, span.tooltip_down_left, span.tooltip_down_right {
+    border-bottom:1px dashed #000;
+    display:inline-block;
+}
+th span.tooltip_left, th span.tooltip_right, th span.tooltip_down_left, th span.tooltip_down_right {
+    border-bottom:1px dashed #fff;
+    display:inline-block;
+}
+.tooltip_hidden {
+    position:relative;
+    z-index:4;
+    zoom:1;
+    padding:10px;
+    color:#000;
+    font-weight:normal;
+    margin:0;
+    border:1px solid #DCDCDC;
+    background:#FFFFCC;
+    display:none;
+    width:310px;
+}
+*/
+.soria .dijitSliderIncrementIconH, .soria .dijitSliderIncrementIconV {
+	background:url(../images/spriteRoundedIconsSmall.png) no-repeat -45px top !important;
+	_background:url(../images/spriteRoundedIconsSmall.gif) no-repeat -45px top !important;
+}
+.soria .dijitSliderIncrementIconH {
+	background:url(../images/spriteRoundedIconsSmall.png) no-repeat 0px top !important;
+	_background:url(../images/spriteRoundedIconsSmall.gif) no-repeat 0px top !important;
+}
+.soria .dijitSliderDecrementIconH, .soria .dijitSliderDecrementIconV {
+	background:url(../images/spriteRoundedIconsSmall.png) no-repeat -15px top !important;
+	_background:url(../images/spriteRoundedIconsSmall.gif) no-repeat -15px top !important;
+}
+.soria .dijitSliderDecrementIconH {
+	background:url(../images/spriteRoundedIconsSmall.png) no-repeat -30px top !important;
+	_background:url(../images/spriteRoundedIconsSmall.gif) no-repeat -30px top !important;
+}
+.resultCount {
+	display:none;
+}

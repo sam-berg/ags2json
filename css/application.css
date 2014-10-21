@@ -1,0 +1,377 @@
+html, body {
+    margin:0;
+    padding:0;
+    background:#fff;
+    height:100%;
+    width:100%;
+    font-family:Verdana !important;
+    font-style:normal;
+    font-size:12px !important;
+    line-height:normal !important;
+}
+a, a:visited {
+    color:#014c85;
+    cursor:pointer;
+}
+a:hover, a:active {
+    color:#000;
+}
+.clear {
+    clear:both;
+}
+h2 {
+    font-size:14px;
+    line-height:normal;
+    padding:10px;
+    margin:0;
+}
+#mapcon, #map {
+    width:100%;
+    height:100%;
+}
+#map_zoom_slider {
+    position:absolute !important;
+    top:70px !important;
+    left:295px !important;
+    margin:0 !important;
+}
+#locatebox {
+    background:url(../images/background.png) top left repeat;
+    _background-image:none;
+    _background-color:#e7eff0;
+    padding:10px;
+    color:#000;
+    border:1px solid #666;
+    -moz-border-radius:10px;
+    -webkit-border-radius: 10px;
+}
+#topControls {
+    position:absolute;
+    z-index:35;
+    right:10px;
+    top:10px;
+    text-align:right;
+}
+#drawTools
+{
+  padding:5px;  
+}
+
+#topControls #basemap {
+    background:url(../images/background.png) top left repeat;
+    _background-image:none;
+    _background-color:#e7eff0;
+    padding:10px;
+    color:#000;
+    border:1px solid #666;
+    -moz-border-radius:10px;
+    -webkit-border-radius: 10px;
+}
+#topControls #basemap a, #locatebox a, a.button {
+    display:inline-block;
+    font-size:12px;
+    line-height:12px;
+    text-decoration:none;
+    margin:0;
+    border:1px solid #000;
+    padding:7px 6px;
+    max-height:26px;
+    cursor:pointer;
+    color:#fff !important;
+    font-weight:bold;
+    white-space:nowrap;
+    background:url(../images/button.jpg) left center repeat-x;
+}
+#topControls #basemap a.selected, a.selected {
+    background-image:url(../images/button_hover.jpg);
+}
+#topControls #basemap a.disabled, a.disabled {
+    color:#444 !important;
+    background-image:url(../images/button_disabled.jpg);
+    cursor:default;
+}
+.marginButton {
+    margin-right:10px;
+}
+#controls {
+    position:absolute;
+    top:10px;
+    left:10px;
+    z-index:36;
+    width:275px;
+}
+#controls #AGS2JSON,#JSON2AGS {
+    background:url(../images/background.png) top left repeat;
+    _background-image:none;
+    _background-color:#e7eff0;
+    padding:0;
+    color:#014c85;
+    -moz-border-radius:10px;
+    -webkit-border-radius: 10px;
+    border:1px solid #666;
+    margin-top:10px;
+}
+#controls #search_box {
+    background:url(../images/background.png) top left repeat;
+    _background-image:none;
+    _background-color:#e7eff0;
+    padding:0;
+    color:#014c85;
+    -moz-border-radius:10px;
+    -webkit-border-radius: 10px;
+    border:1px solid #666;
+    margin-top:10px;
+}
+#controls #search_box input, #locatebox input {
+    border-collapse:collapse;
+    border:0;
+    margin:0;
+    font-size:12px;
+    line-height:12px !important;
+    padding:5px 6px;
+}
+#share_map {
+    position:absolute;
+    z-index:35;
+    top:10px;
+    left:295px;
+    background:url(../images/background.png) top left repeat;
+    _background-image:none;
+    _background-color:#e7eff0;
+    padding:13px 10px;
+    color:#014c85;
+    -moz-border-radius:10px;
+    -webkit-border-radius: 10px;
+    border:1px solid #666;
+}
+#logo {
+    position:absolute;
+    z-index:35;
+    bottom:10px;
+    right:10px;
+    background:url(../../../serverapi.arcgisonline.com/jsapi/arcgis/2.0/images/map/logo-med.png) top left repeat;
+    _background-image:none;
+ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../serverapi.arcgisonline.com/jsapi/arcgis/2.0/images/map/logo-med.png', sizingMethod='crop');
+    width:64px;
+    height:36px;
+}
+.box {
+    background:#fff;
+    margin:10px;
+    margin-top:0;
+    padding:10px;
+    border:1px solid #ccc;
+    -moz-border-radius:10px;
+    -webkit-border-radius: 10px;
+}
+.layersList {
+    display:block;
+    position:relative;
+}
+.layersList li.layer {
+    display:block;
+    position:relative;
+    width:225px;
+    margin:4px 0;
+}
+.layersList li.layer a.checked, .layersList li.layer a.unchecked {
+    display:inline-block;
+    line-height:20px;
+    min-height:20px;
+    text-decoration:none;
+    padding-left:55px;
+    padding-right:10px;
+    cursor:pointer;
+}
+.layersList li.layer a.checked {
+    background:url(../images/panels/checked.jpg) 0 0 no-repeat;
+}
+.layersList li.layer a.unchecked {
+    background:url(../images/panels/unchecked.jpg) 0 0 no-repeat;
+}
+.layersList li.layer a.icon {
+    position:absolute;
+    left:25px;
+    top:0;
+    cursor:default;
+}
+#radio {
+    border-bottom:1px solid #ccc;
+    padding-bottom:5px;
+    margin-bottom:6px;
+}
+.radSelected, .radUnselected {
+    padding-left:21px;
+    text-decoration:none;
+    cursor:pointer;
+    display:inline-block;
+    display:inline-block;
+    line-height:20px;
+    height:20px;
+    margin-right:5px;
+}
+.radSelected {
+    background:url(../images/panels/radio_selected.jpg) center left no-repeat;
+}
+.radUnselected {
+    background:url(../images/panels/radio_unselected.jpg) center left no-repeat;
+}
+.expanded {
+    border:1px solid #000;
+}
+.expand, .collapse {
+    background-position:right center;
+    background-repeat:no-repeat;
+    cursor:pointer;
+}
+.collapse {
+    background-image:url(../images/panels/minus.gif);
+}
+.expand {
+    background-image:url(../images/panels/plus.gif);
+}
+#map_infowindow {
+    position:absolute !important;
+    z-index:997 !important;
+}
+#dialog2 {
+    z-index:999 !important;
+}
+#dialog5 {
+    z-index:998 !important;
+}
+/*  Tabbed CSS */
+.ui-tabs .ui-tabs-hide {
+    display: none;
+}
+.tab_layout {
+    margin-top:10px;
+}
+.ui-tabs-nav {
+    text-align:left;
+    margin:0;
+    padding:0;
+    list-style:none;
+    height: 29px;
+}
+.ui-tabs-nav li {
+    float:left;
+    background:none;
+    padding:0;
+    margin:0;
+}
+.ui-tabs-nav li a {
+    background: #eee repeat-x top left;
+    position:relative;
+    display:block;
+    float:left;
+    padding:8px 25px;
+    font-size:12px;
+    line-height:12px;
+    margin:0;
+    margin-right:-5px;
+    text-decoration: none;
+    white-space: nowrap;
+    border:1px solid #ccc;
+    border-bottom:0;
+    -moz-border-radius:10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius-bottomleft:0;
+    -webkit-border-bottom-left-radius:0;
+    -moz-border-radius-bottomright:0;
+    -webkit-border-bottom-right-radius:0;
+}
+.ui-tabs-nav li.ui-tabs-selected a {
+    background: #fff;
+    z-index:3;
+    padding-bottom:9px;
+}
+.ui-tabs-nav li a:focus {
+    outline:none;
+}
+.ui-tabs-panel {
+    background:#fff;
+    padding:10px;
+    border:1px solid #ccc;
+    -moz-border-radius:10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius-topleft:0;
+    -webkit-border-top-left-radius:0;
+}
+#searchTxt2 {
+    margin-top:5px;
+}
+#searchcon, #locate {
+    position:relative;
+    height:26px;
+}
+.fscon {
+    border:1px solid #000;
+    background:#fff;
+    position:absolute;
+    top:0;
+    left:0;
+    height:26px;
+}
+#locatebox .fscon {
+    width:188px;
+}
+#sharedIndent .fscon {
+    width:115px;
+}
+#locateBtn {
+    position:absolute;
+    top:0;
+    left:195px;
+}
+#searchBtn {
+    position:absolute;
+    top:0;
+    left:122px;
+}
+#address {
+    width:156px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+#searchTxt {
+    width:65px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.resetlocate, .resetsearch {
+    display:block;
+    width:12px;
+    height:12px;
+    margin:0;
+    background-position:left center;
+    background-repeat:no-repeat;
+    position:absolute;
+    top:7px;
+    right:5px;
+}
+.resetoff {
+    background-image:none;
+}
+.reseton {
+    background-image:url(../images/panels/x.jpg);
+    cursor:pointer;
+}
+#map .inappropriate {
+    font-size:9px !important;
+}
+#controls #search_box .tooltip_hidden .tooltipSearch {
+    border-top:1px solid #dad8af;
+    margin-top:10px;
+    padding-top:10px;
+}
+#controls #search_box .tooltip_hidden .tooltipSearch label {
+    display:block;
+    margin-bottom:3px;
+}
+#controls #search_box .tooltip_hidden .tooltipSearch input {
+    border:1px solid #000;
+    width:190px;
+}
